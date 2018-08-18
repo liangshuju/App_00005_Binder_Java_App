@@ -5,6 +5,10 @@
  *
  **********/
 
+import android.util.Slog;
+import android.os.ServiceManager;
+
+
 public class TestServer {
 
 	private static final String TAG = "java_binder_TestServer";
@@ -14,6 +18,9 @@ public class TestServer {
 		/* add server */
         Slog.i(TAG, " add hello server.");
 		ServiceManager.addService("hello", new HelloService());
+		
+		Slog.i(TAG, " add goodbye server.");
+		ServiceManager.addService("goodbye", new GoodbyeService());
 
 		while (true) {
 			try {

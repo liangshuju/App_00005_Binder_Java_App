@@ -1,6 +1,9 @@
 
 /* realize hello service function */
 
+import android.util.Slog;
+
+
 public class HelloService extends IHelloService.Stub {
 
 	private static final String TAG = "java_binder_HelloService";
