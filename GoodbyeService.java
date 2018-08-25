@@ -4,7 +4,7 @@ import android.util.Slog;
 
 public class GoodbyeService extends IGoodbyeService.Stub {
 
-	private static final String TAG = "java_binder_GoodbyeService";
+	private static final String TAG = "binder_java_GoodbyeService";
 	private int cnt1 = 0;
 	private int cnt2 = 0;
 	

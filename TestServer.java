@@ -11,15 +11,15 @@ import android.os.ServiceManager;
 
 public class TestServer {
 
-	private static final String TAG = "java_binder_TestServer";
+	private static final String TAG = "binder_java_TestServer";
 
 	public static void main(String args[]) {
 
 		/* add server */
-        Slog.i(TAG, " add hello server.");
+        Slog.i(TAG, "liangsj add hello server.");
 		ServiceManager.addService("hello", new HelloService());
 		
-		Slog.i(TAG, " add goodbye server.");
+		Slog.i(TAG, "liangsj add goodbye server.");
 		ServiceManager.addService("goodbye", new GoodbyeService());
 
 		while (true) {

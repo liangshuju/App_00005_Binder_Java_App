@@ -12,9 +12,11 @@ import android.os.IBinder;
 
 public class TestClient {
 
-	private static final String TAG = "java_binder_TestClient";
+	private static final String TAG = "binder_java_TestClient";
 
 	public static void main(String args[]) {
+
+		int reply;
 
 		if (args.length == 0) {
 			System.out.println("Usage : need parameter: <hello|goodbye> [name]");
@@ -46,9 +48,9 @@ public class TestClient {
 			} else if (args.length == 2) {
 
 				try {
-					serviceHello.sayhello_to(args[1]);
-					System.out.println("test_client call sayhello_to ");
-					Slog.i(TAG, "test_client call sayhello_to ");
+					reply = serviceHello.sayhello_to(args[1]);
+					System.out.println("test_client call sayhello_to : reply = " + reply);
+					Slog.i(TAG, "test_client call sayhello_to : reply = " + reply);
 				} catch (Exception e) {
 
 				}
@@ -75,9 +77,9 @@ public class TestClient {
 				}
 			} else if (args.length == 2) {
 				try {
-					serviceGoodbye.saygoodbye_to(args[1]);
-					System.out.println("test_client call saygoodbye_to .");
-					Slog.i(TAG, "test_client call saygoodbye_to .");
+					reply = serviceGoodbye.saygoodbye_to(args[1]);
+					System.out.println("test_client call saygoodbye_to. : reply = " + reply);
+					Slog.i(TAG, "test_client call saygoodbye_to. : reply = " + reply);
 				} catch (Exception e) {
 				
 				}

@@ -6,7 +6,7 @@ import android.util.Slog;
 
 public class HelloService extends IHelloService.Stub {
 
-	private static final String TAG = "java_binder_HelloService";
+	private static final String TAG = "binder_java_HelloService";
 	private int cnt1 = 0;
 	private int cnt2 = 0;
 
